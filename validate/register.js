@@ -29,11 +29,11 @@ if(Validator.isEmpty(data.cpass)){
     error.cpass = "password confirm karo"
 }
 
-if(Validator.isLength(data.pass, {min: 5, max:10})){
+if(!Validator.isLength(data.pass, {min: 5, max:10})){
     error.pass = "password at least 5 characters ka hona chaiye";
 }
 
-if(Validator.equals(data.pass,data.cpass)){
+if(!Validator.equals(data.pass,data.cpass)){
     error.cpass = "password hi same nhi bhare ho, kya hi hoga tumhara"
 }
 

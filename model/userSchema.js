@@ -9,9 +9,10 @@ const UserSchema = new Schema({
   email: { 
       type: String, 
       required: true },
-  password: { 
-      type: String, 
-      required: true },
+  pass: { 
+      type: String,
+      required: true
+      },
   date: {
     type: Date,
     default: Date.now,
@@ -19,5 +20,5 @@ const UserSchema = new Schema({
 });
 
 
-module.exports = UserSchema = mongoose.model("prac2", UserSchema);
+module.exports = User = mongoose.model("prac2", UserSchema);
 
