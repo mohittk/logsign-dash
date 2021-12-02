@@ -44,9 +44,9 @@ class Register extends Component {
     this.state = {
       name: "",
       email: "",
-      password: "",
-      password2: "",
-      errors: {}
+      pass: "",
+      cpass: "",
+      error: {}
     };
   }
 onChange = e => {
@@ -57,11 +57,12 @@ onSubmit = e => {
 const newUser = {
       name: this.state.name,
       email: this.state.email,
-      password: this.state.password,
-      password2: this.state.password2
+      password: this.state.pass,
+      password2: this.state.cpass
     };
 console.log(newUser);
   };
+}
 return (
       <div className="container">
         <div className="row">
@@ -138,6 +139,6 @@ return (
         </div>
       </div>
     );
-  }
-}
+    
+                
 export default Register;
