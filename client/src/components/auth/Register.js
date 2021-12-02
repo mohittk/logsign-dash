@@ -1,54 +1,18 @@
-// import React, { Component } from "react";
-// import { Link } from "react-router-dom";
-
-// class Register extends Component {
-//     constructor() {
-//         super();
-//         this.state = {
-//             name:"",
-//             email:"",
-//             pass:"",
-//             cpass:"",
-//             error:{}
-            
-//         };
-//     }
-
-//     onChange=e=>{
-//         this.setState({[e.target.id]: e.target.value});
-//     };
-
-//     onSubmit = e =>{
-//         e.preventDefault();
-//         const newUser ={
-//             name : this.state.name,
-//             email: this.state.email,
-//             pass: this.state.pass,
-//             cpass: this.state.cpass
-//         };
-//         console.log(newUser);
-//     }
-
-//     return (
-        
-        
-//     )
-
-   
-// }
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 class Register extends Component {
-  constructor() {
+
+  constructor(){
     super();
     this.state = {
       name: "",
       email: "",
-      pass: "",
-      cpass: "",
-      error: {}
+      password: "",
+      password2: "",
+      errors: {}
     };
   }
+
 onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
@@ -57,12 +21,16 @@ onSubmit = e => {
 const newUser = {
       name: this.state.name,
       email: this.state.email,
-      password: this.state.pass,
-      password2: this.state.cpass
+      password: this.state.password,
+      password2: this.state.password2
     };
 console.log(newUser);
   };
-}
+
+  render(){
+    const { errors } = this.state;
+
+  
 return (
       <div className="container">
         <div className="row">
@@ -139,6 +107,8 @@ return (
         </div>
       </div>
     );
-    
-                
+  }
+}
+
+
 export default Register;
